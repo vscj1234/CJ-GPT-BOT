@@ -38,7 +38,7 @@ os.environ["OPENAI_API_KEY"] = "your api key"
 embeddings = OpenAIEmbeddings()
 docsearch = Chroma(persist_directory="./chroma_db", embedding_function=embeddings)
 
-llm = ChatOpenAI(model="gpt-4")
+llm = ChatOpenAI(model="gpt-4o")
 
 chain = ConversationalRetrievalChain.from_llm(
     llm=llm,
